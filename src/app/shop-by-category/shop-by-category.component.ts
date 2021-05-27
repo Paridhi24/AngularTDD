@@ -27,8 +27,11 @@ export class ShopByCategoryComponent implements OnInit {
     
     }
     
-    onClickingGroceryItems(){
-      this.router.navigate([ 'products' ]);
+    onClickingGroceryItems(el: HTMLElement){
+      let category = el.innerText;
+      console.log("category" ,category);
+      
+      this.router.navigate([ 'products', category]);
     }
 
 }

@@ -2,16 +2,16 @@
  <tbody>
    
   <th class="data-space">Grocery</th>
-    <tr *ngFor="let groceryThings of groceries">        
-        <td><a (click)="onClickingGroceryItems()">{{groceryThings.name}}</a></td>
+    <tr  *ngFor="let groceryThings of groceries">        
+        <td><a #item (click)="onClickingGroceryItems(item)">{{groceryThings.name}}</a></td>
     </tr>
     <th class="data-space">Electronics</th>
     <tr *ngFor="let electronicItems of electronics">      
-      <td><a (click)="onClickingGroceryItems()">{{electronicItems.name}}</a></td>
+      <td><a #item (click)="onClickingGroceryItems(item)">{{electronicItems.name}}</a></td>
   </tr>
   <th class="data-space">Apparels</th>
   <tr *ngFor="let apparelItems of apparels">   
-    <td><a (click)="onClickingGroceryItems()">{{apparelItems.name}}</a></td>
+    <td><a  #item (click)="onClickingGroceryItems(item)">{{apparelItems.name}}</a></td>
   </tr>
   
  </tbody>

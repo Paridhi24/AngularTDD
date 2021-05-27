@@ -4,10 +4,12 @@ import { HomeComponent } from './home/home.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ShopByCategoryComponent } from './shop-by-category/shop-by-category.component';
 
-const routes: Routes = [
-  {path: 'shop', component:ShopByCategoryComponent},
-  {path: '#', component:HomeComponent},
-  {path: 'products', component:ProductDetailsComponent}
+export const routes: Routes = [
+  {path: '', component: HomeComponent, children:
+  [
+    {path:"products/:name", component: ProductDetailsComponent},
+    {path: 'shop', component:ShopByCategoryComponent},
+]}
 ];
 
 @NgModule({

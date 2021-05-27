@@ -15,12 +15,12 @@
             },
             {
                 "id": 3,  
-                "name": "Frozen Foods",  
+                "name": "Frozen-Foods",  
                 "description": "all types available",
                 "price": 500  
             },{
                 "id": 4,  
-                "name": "Dairy Items",  
+                "name": "Dairy-Items",  
                 "description": "all are available",
                 "price": 20  
             }],
@@ -38,7 +38,7 @@
             },
             {
                 "id": 3,  
-                "name": "Mobile stick",  
+                "name": "Selfie-stick",  
                 "description": "all types available",
                 "price": 500  
             },
@@ -50,19 +50,19 @@
             }],
             "apparels": [{
                 "id": 1,  
-                "name": "Women Apparels",  
+                "name": "Women-Apparels",  
                 "description": "white and brown available",
                 "price": 2000  
             },
             {
                 "id": 2,  
-                "name": "Men Apparels",  
+                "name": "Men-Apparels",  
                 "description": "all types available",
                 "price": 1000  
             },
             {
                 "id": 3,  
-                "name": "Kids Apparels",  
+                "name": "Kids-Apparels",  
                 "description": "all types available",
                 "price": 800  
             }]

@@ -11,16 +11,11 @@ describe("Router: App", () => {
   let location: Location;
   let router: Router;
   let fixture;
-//   let mockRouter = {
-// 	navigate: jasmine.createSpy('navigate')
-// }
+  
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule.withRoutes(routes)],
       declarations: [HomeComponent, ShopByCategoryComponent, ProductDetailsComponent],
-    //   providers: [
-	// 	{ provide: Router, useValue: mockRouter.navigate},
-	// ]
     });
 
     router = TestBed.get(Router);
@@ -36,9 +31,19 @@ describe("Router: App", () => {
     });
   }));
 
-  it('navigate to "shop by category" takes you to /shop', fakeAsync(() => {
-    router.navigate(["shop"]).then(() => {
-      expect(location.path()).toBe("/shop");
-    });
-  }));
+  it('routes should contain the path /shop or product category', () => {
+    expect(routes).toContain({path: '', component: HomeComponent, children:
+    [
+      {path:"products/:name", component: ProductDetailsComponent},
+      {path: 'shop', component:ShopByCategoryComponent}
+  ]});    
+  });
+
+  it('routes should contain the path /products', () => {
+    expect(routes).toContain({path: '', component: HomeComponent, children:
+    [
+      {path:"products/:name", component: ProductDetailsComponent},
+      {path: 'shop', component:ShopByCategoryComponent}
+  ]});    
+  });
 });

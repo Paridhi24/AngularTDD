@@ -3,6 +3,13 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { By } from '@angular/platform-browser';
 
 import { HomeComponent } from './home.component';
+import { Router } from '@angular/router';
+
+class RouterStub{
+  navigate(params:any){
+
+  }
+}
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -11,7 +18,10 @@ describe('HomeComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports:[RouterTestingModule],
-      declarations: [ HomeComponent ]
+      declarations: [ HomeComponent ],
+      providers: [
+        {provider: Router, useClass: RouterStub}
+      ]
     })
     .compileComponents();
   });
@@ -31,5 +41,19 @@ describe('HomeComponent', () => {
     let element:HTMLElement = brandName.nativeElement;
 
     expect(element.innerText).toBe('Beyond');
+  });
+
+  it('should check the click event on clicking shopByCategory', () => {
+    let shopButton = fixture.debugElement.query(By.css('#home'));
+    shopButton.triggerEventHandler('click', null);
+
+    expect(component.displayCategories()).toBeDefined;
+  });
+  
+  it('should redirect the user to home page', () => {
+    let router = TestBed.get(Router);
+    let spy = spyOn(router, 'navigate');
+    component.displayCategories();
+    expect(spy).toHaveBeenCalledWith(['shop']);
   });
 });

@@ -25,14 +25,6 @@ export class AppComponent {
     }
   }
 
-  pressNumber(el: number){
-    if((this.isSecondNumber === false)) {      
-    this.num = this.num + el.toString();    
-    } else {
-      this.num2 = this.num2 + el.toString();
-    }
-  }
-
   pressOperator(operator: string){    
     if(this.operators.includes(operator)) {
       this.isSecondNumber = true;

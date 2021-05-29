@@ -24,10 +24,14 @@ export class AppComponent {
       this.num2 = this.num2 + el;
     }
   }
-
+  
   pressOperator(operator: string){    
     if(this.operators.includes(operator)) {
       this.isSecondNumber = true;
+      if(this.num2 !==''){
+        this.num = String(this.getResults());
+        this.num2='';
+      }
       this.operate = operator;  
     }
   }

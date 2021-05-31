@@ -130,7 +130,6 @@ describe('AppComponent', () => {
     el.triggerEventHandler('click', clearOption.innerText);
     fixture.detectChanges
     expect(app.result).toBe(null);
-    expect(app.input).toBe('');
   });
 
 });

@@ -40,6 +40,10 @@
             <ul class="nav navbar-nav">
                 <li><a id="home" (click)="displayCategories()">Shop by Category</a></li>
             </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a *ngIf="!isLoggedIn" id="login" (click)="login()">Login</a></li>
+              <li><a *ngIf="isLoggedIn" id="login" (click)="logout()">Logout</a></li>
+          </ul>
         </div>
     </div>
 </nav>

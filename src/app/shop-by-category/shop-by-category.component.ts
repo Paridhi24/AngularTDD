@@ -32,4 +32,8 @@ export class ShopByCategoryComponent implements OnInit {
       this.router.navigate([ 'products', category]);
     }
 
+    showDetails(){
+      this.router.navigate(['retailers'])
+    }
+
 }

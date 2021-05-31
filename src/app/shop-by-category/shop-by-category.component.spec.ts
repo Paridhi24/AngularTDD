@@ -138,4 +138,11 @@ describe('ShopByCategoryComponent', () => {
     component.onClickingGroceryItems('name');
     expect(spy).toHaveBeenCalledWith(['products', 'name']);
   });
+
+  it('should redirect to /retailers', () => {
+    let router = TestBed.get(Router);
+    let spy = spyOn(router, 'navigate');
+    component.showDetails();
+    expect(spy).toHaveBeenCalledWith(['retailers']);
+  });
 });

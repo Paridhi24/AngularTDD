@@ -13,6 +13,11 @@
   <tr *ngFor="let apparelItems of apparels">   
     <td><a  #item (click)="onClickingGroceryItems(item.innerText)">{{apparelItems.name}}</a></td>
   </tr>
+
+  <th class="data-space">Retailers</th>
+  <tr>   
+    <td><a  #details (click)="showDetails()">Retailers Details</a></td>
+  </tr>
   
  </tbody>
 </table>

@@ -8,7 +8,6 @@ import * as EventEmitter from 'events';
 })
 export class AppComponent {
 
-  public input: any;
   public num: string='';
   public operate:string;
   public num2: string='';
@@ -59,7 +58,6 @@ export class AppComponent {
   }
 
   clearAll(){
-    this.input = '';
     this.num = '';
     this.num2 = '';
     this.operate = '';

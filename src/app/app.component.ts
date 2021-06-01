@@ -65,4 +65,11 @@ export class AppComponent {
     this.isSecondNumber = false;
   }
 
+  clearInput(){
+    this.num ='';
+    this.num2 = '';
+    this.operate = '';
+    this.isSecondNumber = false;
+  }
+
 }

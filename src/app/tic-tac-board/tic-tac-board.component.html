@@ -1,0 +1,14 @@
+<h1>Current player is {{ player }}</h1>
+
+<button class="btn btn-primary game-button" (click)=newGame()>New Game</button>
+
+<h2 id="winner" *ngIf="winnerPlayer">Player {{ winnerPlayer }} has won the game</h2>
+<h2 id="ties" *ngIf="tie && !winnerPlayer">It is a tie !!!!</h2>
+
+<main>
+    <app-tic-tac-squares *ngFor="let square of squares, let i=index"
+    [value]="square"
+    (click)=playTurn(i)
+    >  
+    </app-tic-tac-squares>
+</main>

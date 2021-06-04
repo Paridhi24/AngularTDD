@@ -1,0 +1,16 @@
+main {
+    display: grid;
+    grid-template-columns: 80px 80px 80px;
+    grid-gap: 0px;
+}
+  
+app-tic-tac-squares {
+    border: 1px gray solid;
+    height: 80px;
+    width: 80px;
+    background-color: aliceblue;
+}
+
+.game-button{
+    margin-bottom: 20px;
+}
